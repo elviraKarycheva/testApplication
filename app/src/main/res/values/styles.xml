@@ -1,0 +1,50 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:textColor">@color/colorTextButton</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/medium_space</item>
+        <item name="android:layout_marginLeft">@dimen/medium_space</item>
+        <item name="android:layout_marginTop">@dimen/medium_space</item>
+        <item name="android:layout_marginBottom">@dimen/large_space</item>
+    </style>
+
+    <style name="ButtonStylePreviewActivity" parent="ButtonStyle">
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+
+    <style name="MainActivityElements">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/medium_space</item>
+        <item name="android:layout_marginLeft">@dimen/medium_space</item>
+        <item name="android:layout_marginTop">@dimen/medium_space</item>
+        <item name="errorEnabled">true</item>
+    </style>
+
+    <style name="PreviewActivityImageElements">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/medium_space</item>
+        <item name="android:layout_marginTop">@dimen/medium_space</item>
+    </style>
+
+    <style name="PreviewActivityTextElements">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/large_space</item>
+    </style>
+
+</resources>

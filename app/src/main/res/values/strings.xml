@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Test Application</string>
+    
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="password">Password</string>
+
+    <string name="button_view">View</string>
+    <string name="button_send">Send by email</string>
+
+    <string name="error_email">Введите корректный email</string>
+    <string name="error_phone">Введите корректный номер телефона</string>
+    <string name="error_password">Пароль должен быть не менее 6 символов, содержать буквы и цифры</string>
+    <string name="error_camera">Сделайте фото</string>
+    <string name="error_permission">Предоставьте доступ к камере</string>
+
+    <string name="request_permission">Разрешить использование камеры?</string>
+
+    <string name="project_name">данные анкеты</string>
+    <string name="email_text_template">Email: %1$s\nPhone: %2$s\n</string>
+
+</resources>

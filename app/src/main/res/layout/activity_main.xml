@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="interactor"
+            type="com.example.karyc.testapplication.MainActivity.ActivityInteractor" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".MainActivity">
+
+            <ImageView
+                android:id="@+id/cameraImage"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="@dimen/medium_space"
+                android:background="@drawable/round_button"
+                android:onClick='@{interactor::onClickTakePhoto}'
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toTopOf="@+id/emailInputLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_photo_camera_black_24dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/emailInputLayout"
+                app:errorEnabled="true"
+                app:layout_constraintBottom_toTopOf="@+id/phoneInputLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cameraImage"
+                style="@style/MainActivityElements">
+
+                <EditText
+                    android:id="@+id/emailField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/phoneInputLayout"
+                style="@style/MainActivityElements"
+                app:counterEnabled="true"
+                app:counterMaxLength="12"
+                app:errorEnabled="true"
+                app:layout_constraintBottom_toTopOf="@+id/passwordInputLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emailInputLayout">
+
+                <EditText
+                    android:id="@+id/phoneField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phone"
+                    android:inputType="phone" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/passwordInputLayout"
+                style="@style/MainActivityElements"
+                app:layout_constraintBottom_toTopOf="@+id/buttonView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneInputLayout"
+                app:passwordToggleContentDescription="@string/password"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/passwordField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:inputType="textPassword" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/buttonView"
+                style="@style/ButtonStyle"
+                android:background="@color/colorPrimary"
+                android:onClick='@{interactor::onClickPreview}'
+                android:text="@string/button_view"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordInputLayout" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>
